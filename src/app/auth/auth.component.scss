@@ -1,0 +1,36 @@
+@mixin large-screen {
+    @media screen and (min-width: 996px) {
+        @content
+    }
+}
+
+.grid {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    height: 100%;
+}
+
+mat-card {
+    height: 50vh;
+    width: 80vw;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    @include large-screen {
+        height: 50vh;
+        width: 50vh;
+    }
+    mat-form-field {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    button {
+        margin: 0 auto;
+    }
+}
