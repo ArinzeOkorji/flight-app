@@ -18,7 +18,6 @@
 mat-card {
     height: 50vh;
     width: 80vw;
-    height: 100px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -28,7 +27,7 @@ mat-card {
     }
     mat-form-field {
         width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
     button {
         margin: 0 auto;
