@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Inject } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { FlightDetailsComponent } from '../flight-details/flight-details.component';
 
 @Component({
   selector: 'app-home-page',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
+  @ViewChild('component', {static: false}) component;
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
   }
 
+  openDialog() {
+    const disaligRef = this.dialog.open(FlightDetailsComponent, {
+      width: '250px'
+    });
+  }
+
 }
+

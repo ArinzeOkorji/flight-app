@@ -13,12 +13,15 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { HomePageComponent } from './home-page/home-page.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { FlightDetailsComponent } from './flight-details/flight-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
-    HomePageComponent
+    HomePageComponent,
+    FlightDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,9 +33,13 @@ import { HomePageComponent } from './home-page/home-page.component';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    FlightDetailsComponent
+  ]
 })
 export class AppModule { }
