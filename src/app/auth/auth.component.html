@@ -4,10 +4,10 @@
             <form (ngSubmit)='submitForm(form)' #form='ngForm'>
                 <h2>Login</h2>
                 <mat-form-field>
-                    <input ngModel='username' name="username" required class='username' type="text" matInput placeholder="username">
+                    <input [ngModel]='username' name="username" required class='username' type="text" matInput placeholder="username">
                 </mat-form-field>
                 <mat-form-field>
-                    <input ngModel=password name="pasword" required class='password' type="password" matInput placeholder="password">
+                    <input [ngModel]='password' name="pasword" required class='password' type="password" matInput placeholder="password">
                 </mat-form-field>
                 <button color='primary' mat-raised-button>Submit</button>
             </form>
